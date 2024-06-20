@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ChangePasswordTest extends BaseTest {
     /**
-     * Изменение пароля с коректными параметрами
+     * Изменение пароля с корректными параметрами
      */
     @Test
     public void ChangePassword(){
