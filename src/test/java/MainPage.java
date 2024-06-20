@@ -1,6 +1,5 @@
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.Keys;
-
-import java.security.Key;
 
 import static com.codeborne.selenide.Condition.visible;
 
@@ -9,6 +8,7 @@ import static com.codeborne.selenide.Condition.visible;
  */
 public class MainPage {
     Constants constants = new Constants();
+    boolean result = true;
     /**
      * Нажатие на ссылку создания аккаунта
      */
@@ -48,12 +48,19 @@ public class MainPage {
     }
 
     /**
-     * Нажатие на подкатегорию
+     * Нажатие на подкатегорию "Jackets"
      */
     public void clickCategoryJacket(){
         constants.buttonCategoryWoman.hover();
         constants.buttonSubcategoryTops.hover();
         constants.buttonSubcategoryJackets.click();
+    }
+    /**
+     * Нажатие на подкатегорию "Tops"
+     */
+    public void clickCategoryTops(){
+        constants.buttonCategoryWoman.hover();
+        constants.buttonSubcategoryTops.click();
     }
     /**
      * Нажатие на карточку продукта
@@ -71,6 +78,48 @@ public class MainPage {
     public ResultSearchQueryPage fullAndClickSearchBar(String text){
         constants.searchBar.sendKeys(text,Keys.ENTER);
         return new ResultSearchQueryPage();
+    }
+
+    /**
+     * Проверка корректной фильтрации товаров
+     * @return
+     */
+    public boolean checkResultFilter(){
+
+        for(SelenideElement elementSize : constants.filterSizeProducts){
+            if (!elementSize.getAttribute("option-selected").contains(constants.optionIdSizeXs)){
+                result = false;
+                break;
+            }
+            else {
+                result = true;
+            }
+        }
+        for(SelenideElement elementColor : constants.filterColorProduct){
+            if (!elementColor.getAttribute("option-selected").contains(constants.optionsIdColorBlack)){
+                result = false;
+                break;
+            }
+            else {
+                result = true;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Выбор значения фильтра "Size"
+     */
+    public void clickFilterSize(){
+        constants.buttonOpenFilterSize.click();
+        constants.buttonSelectSizeXS.click();
+    }
+    /**
+     * Выбор значения фильтра "Color"
+     */
+    public void clickFilterColor(){
+        constants.buttonOpenFilterColor.click();
+        constants.buttonSelectColorBlack.click();
     }
 
 

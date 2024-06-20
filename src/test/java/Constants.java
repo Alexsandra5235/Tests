@@ -42,10 +42,16 @@ public class Constants {
             messengerSuccessAddToCard = $x("//*[@id=\"maincontent\"]/div[1]"),
             buttonAddToWishList = $x("//*[@id=\"maincontent\"]/div[2]/div/div[1]/div[5]/div/a[1]"),
             messengerSuccessAddToWishList = $x("//*[@id=\"maincontent\"]/div[1]/div[2]"),
-            searchBar = $x("//*[@id=\"search\"]");
+            searchBar = $x("//*[@id=\"search\"]"),
+            buttonOpenFilterSize = $x("//div[@class=\"block-content filter-content\"]//div[3]"),
+            buttonOpenFilterColor = $x("//div[@class=\"block-content filter-content\"]//div[4]"),
+            buttonSelectSizeXS = $x("//div[@class=\"filter-options-content\"]//div[@option-id=\"166\"]"),
+            buttonSelectColorBlack = $x("//div[@class=\"filter-options-content\"]//div[@option-id=\"49\"]");
 
     public final ElementsCollection errorClickButtonCreateAccount = $$x("//*[@class=\"mage-error\"]"),
-            searchProductsItems = $$x("//ol[@class=\"products list items product-items\"]//img[@class=\"product-image-photo\"]");
+            searchProductsItems = $$x("//ol[@class=\"products list items product-items\"]//img[@class=\"product-image-photo\"]"),
+            filterSizeProducts = $$x("//div[@class=\"swatch-attribute size\"]"),
+            filterColorProduct = $$x("//div[@class=\"swatch-attribute color\"]");
 
     public final String Url = "https://magento.softwaretestingboard.com",
             Email = "sm33@gmail.com",
@@ -57,5 +63,7 @@ public class Constants {
             invalidPassword = "Invalid56",
             newPassword = "NewPassword56",
             newEmail = "new999999@gmail.com",
-            searchQuery = "Short";
+            searchQuery = "Short",
+            optionIdSizeXs = "166",
+            optionsIdColorBlack = "49";
 }
