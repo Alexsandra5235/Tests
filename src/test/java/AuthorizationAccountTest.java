@@ -28,4 +28,15 @@ public class AuthorizationAccountTest extends BaseTest{
 
         assertTrue(signInPage.visibleMessengerEmptyText());
     }
+    @Test
+    public void AuthorizationPasswordInvalid(){
+        mainPage.ClickHrefSignIn();
+
+        signInPage.fillEmail(constants.registeredEmail);
+        signInPage.fillPassword(constants.invalidPassword);
+
+        signInPage.clickButtonSignIn();
+
+        assertTrue(signInPage.visibleMessengerInvalidPassword());
+    }
 }

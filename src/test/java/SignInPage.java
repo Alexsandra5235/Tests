@@ -47,4 +47,12 @@ public class SignInPage {
         }
         return false;
     }
+
+    /**
+     * Проверка появления сообщения о вводе неверного пароля
+     * @return
+     */
+    public boolean visibleMessengerInvalidPassword(){
+        return constants.errorInvalidPassword.shouldBe(visible).isDisplayed();
+    }
 }

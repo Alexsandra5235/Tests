@@ -20,7 +20,8 @@ public class Constants {
             textBoxEmailSignIn = $x("//*[@id=\"email\"]"),
             textBoxPasswordSignIn = $x("//*[@id=\"pass\"]"),
             buttonSignIn = $x("//*[@id=\"send2\"]"),
-            textWelcomeMainPage = $x("/html/body/div[2]/header/div[1]/div/ul/li[1]/span");
+            textWelcomeMainPage = $x("/html/body/div[2]/header/div[1]/div/ul/li[1]/span"),
+            errorInvalidPassword = $x("//*[@id=\"maincontent\"]/div[2]");
 
     public final ElementsCollection errorClickButtonCreateAccount = $$x("//*[@class=\"mage-error\"]");
 
@@ -30,5 +31,6 @@ public class Constants {
             FirstName = "Иван",
             LastName = "Пупкин",
             registeredEmail ="sm999999@gmail.com",
-            invalidEmail = "Random56.text";
+            invalidEmail = "Random56.text",
+            invalidPassword = "Invalid56";
 }
