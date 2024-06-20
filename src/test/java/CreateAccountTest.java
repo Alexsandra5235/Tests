@@ -4,7 +4,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CreateAccountTest extends BaseTest{
 
-
+    /**
+     * Создание аккаунта с корректными параметрами
+     */
     @Test
     public void FillTextElement(){
         mainPage.ClickHrefCreateAccount();
@@ -19,6 +21,9 @@ public class CreateAccountTest extends BaseTest{
         assertTrue(myAccountPage.VisibleItemPage());
     }
 
+    /**
+     * Создание аккаунта без параметров
+     */
     @Test
     public void EmptyTextElement(){
         mainPage.ClickHrefCreateAccount();
@@ -28,6 +33,9 @@ public class CreateAccountTest extends BaseTest{
         assertTrue(createAccountPage.VisibleItemClickCreateAccount());
     }
 
+    /**
+     * Создание аккаунта с зарегестрированным email
+     */
     @Test
     public void registeredEmail(){
         mainPage.ClickHrefCreateAccount();
@@ -43,6 +51,9 @@ public class CreateAccountTest extends BaseTest{
         assertTrue(createAccountPage.visibleMessengerRegisteredEmail());
     }
 
+    /**
+     * Создание аккаунта с неккоректным email
+     */
     @Test
     public void invalidEmail(){
         mainPage.ClickHrefCreateAccount();
@@ -53,11 +64,7 @@ public class CreateAccountTest extends BaseTest{
         createAccountPage.ClickTextBoxFirstName(constants.FirstName);
         createAccountPage.ClickTextBoxLastName(constants.LastName);
 
-        Selenide.sleep(3000);
-
         createAccountPage.ClickButtonCreateAccount();
-
-        Selenide.sleep(3000);
 
         assertTrue(createAccountPage.visibleMessengerInvalidEmail());
 

@@ -1,3 +1,7 @@
+import com.codeborne.selenide.SelenideElement;
+
+import static com.codeborne.selenide.Condition.visible;
+
 /**
  * Страница авторизации
  */
@@ -25,5 +29,22 @@ public class SignInPage {
     public MainPage clickButtonSignIn(){
         constants.buttonSignIn.click();
         return new MainPage();
+    }
+
+    /**
+     * Проверка появдения сообщения о необходимости заполнить поля
+     * @return
+     */
+    public boolean visibleMessengerEmptyText(){
+        for (SelenideElement element : constants.errorClickButtonCreateAccount) {
+            if (element.shouldBe(visible).isDisplayed()) {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
     }
 }

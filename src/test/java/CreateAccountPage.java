@@ -49,7 +49,7 @@ public class CreateAccountPage {
         return new MyAccountPage();
     }
     /**
-     * Проверка отображения элемента, который появляется при ошибке Создания аккаунта
+     * Проверка отображения элемента, который появляется при ошибке создания аккаунта
      * @return
      */
     public boolean VisibleItemClickCreateAccount() {
