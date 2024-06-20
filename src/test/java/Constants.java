@@ -39,7 +39,9 @@ public class Constants {
             buttonSize = $x("//*[@id=\"option-label-size-143-item-167\"]"),
             buttonColor = $x("//*[@id=\"option-label-color-93-item-50\"]"),
             buttonAddToCart = $x("//*[@id=\"product-addtocart-button\"]"),
-            messengerSuccessAddToCard = $x("//*[@id=\"maincontent\"]/div[1]");
+            messengerSuccessAddToCard = $x("//*[@id=\"maincontent\"]/div[1]"),
+            buttonAddToWishList = $x("//*[@id=\"maincontent\"]/div[2]/div/div[1]/div[5]/div/a[1]"),
+            messengeSuccessAddToWishList = $x("//*[@id=\"maincontent\"]/div[1]/div[2]");
 
     public final ElementsCollection errorClickButtonCreateAccount = $$x("//*[@class=\"mage-error\"]");
 

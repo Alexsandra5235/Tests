@@ -13,6 +13,7 @@ abstract public class BaseTest {
     SignInPage signInPage = new SignInPage();
     AccountInformationPage accountInformationPage = new AccountInformationPage();
     CardProductPage cardProductPage = new CardProductPage();
+    MyWishListPage myWishListPage = new MyWishListPage();
     Constants constants = new Constants();
 
     public void SetUp(){

@@ -23,4 +23,13 @@ public class CardProductPage {
     public boolean visibleMessengerSuccessAddToCard(){
         return constants.messengerSuccessAddToCard.shouldBe(visible).isDisplayed();
     }
+
+    /**
+     * Нажатие на кнопку "Add To Wish List"
+     * @return
+     */
+    public MyWishListPage clickButtonAddToWishList(){
+        constants.buttonAddToWishList.click();
+        return new MyWishListPage();
+    }
 }

@@ -1,12 +1,10 @@
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class AddProductToCardTest extends BaseTest{
-    /**
-     * Добавление товара в корзину
-     */
+public class AddProductToWishListTest extends BaseTest{
     @Test
-    public void AddToCard(){
+    public void AddToWishList(){
         mainPage.ClickHrefSignIn();
 
         signInPage.fillEmail(constants.registeredEmail);
@@ -16,9 +14,8 @@ public class AddProductToCardTest extends BaseTest{
         mainPage.clickCategoryJacket();
         mainPage.clickCardProduct();
 
-        cardProductPage.changeSizeAndColor();
-        cardProductPage.clickButtonAddToCard();
+        cardProductPage.clickButtonAddToWishList();
 
-        assertTrue(cardProductPage.visibleMessengerSuccessAddToCard());
+        assertTrue(myWishListPage.visibleMessengerSuccessAddToWishList());
     }
 }
