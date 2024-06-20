@@ -41,9 +41,11 @@ public class Constants {
             buttonAddToCart = $x("//*[@id=\"product-addtocart-button\"]"),
             messengerSuccessAddToCard = $x("//*[@id=\"maincontent\"]/div[1]"),
             buttonAddToWishList = $x("//*[@id=\"maincontent\"]/div[2]/div/div[1]/div[5]/div/a[1]"),
-            messengeSuccessAddToWishList = $x("//*[@id=\"maincontent\"]/div[1]/div[2]");
+            messengerSuccessAddToWishList = $x("//*[@id=\"maincontent\"]/div[1]/div[2]"),
+            searchBar = $x("//*[@id=\"search\"]");
 
-    public final ElementsCollection errorClickButtonCreateAccount = $$x("//*[@class=\"mage-error\"]");
+    public final ElementsCollection errorClickButtonCreateAccount = $$x("//*[@class=\"mage-error\"]"),
+            searchProductsItems = $$x("//ol[@class=\"products list items product-items\"]//img[@class=\"product-image-photo\"]");
 
     public final String Url = "https://magento.softwaretestingboard.com",
             Email = "sm33@gmail.com",
@@ -54,5 +56,6 @@ public class Constants {
             invalidEmail = "Random56.text",
             invalidPassword = "Invalid56",
             newPassword = "NewPassword56",
-            newEmail = "new999999@gmail.com";
+            newEmail = "new999999@gmail.com",
+            searchQuery = "Short";
 }

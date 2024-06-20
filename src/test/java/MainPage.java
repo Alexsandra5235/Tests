@@ -1,3 +1,7 @@
+import org.openqa.selenium.Keys;
+
+import java.security.Key;
+
 import static com.codeborne.selenide.Condition.visible;
 
 /**
@@ -57,6 +61,16 @@ public class MainPage {
     public CardProductPage clickCardProduct(){
         constants.buttonCartProduct.click();
         return new CardProductPage();
+    }
+
+    /**
+     * Ввод поискового запроса
+     * @param text
+     * @return
+     */
+    public ResultSearchQueryPage fullAndClickSearchBar(String text){
+        constants.searchBar.sendKeys(text,Keys.ENTER);
+        return new ResultSearchQueryPage();
     }
 
 

@@ -14,6 +14,7 @@ abstract public class BaseTest {
     AccountInformationPage accountInformationPage = new AccountInformationPage();
     CardProductPage cardProductPage = new CardProductPage();
     MyWishListPage myWishListPage = new MyWishListPage();
+    ResultSearchQueryPage resultSearchQueryPage = new ResultSearchQueryPage();
     Constants constants = new Constants();
 
     public void SetUp(){

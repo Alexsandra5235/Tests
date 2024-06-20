@@ -11,6 +11,6 @@ public class MyWishListPage {
      * @return
      */
     public boolean visibleMessengerSuccessAddToWishList(){
-        return constants.messengeSuccessAddToWishList.shouldBe(visible).isDisplayed();
+        return constants.messengerSuccessAddToWishList.shouldBe(visible).isDisplayed();
     }
 }
