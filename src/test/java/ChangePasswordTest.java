@@ -16,8 +16,9 @@ public class ChangePasswordTest extends BaseTest {
         mainPage.clickDropDownList();
         mainPage.clickMyAccount();
 
-        myAccountPage.clickChangePassword();
+        myAccountPage.clickButtonEdit();
 
+        accountInformationPage.onCheckBoxChangePassword();
         accountInformationPage.fullCurrentPassword(constants.Password);
         accountInformationPage.fullNewPassword(constants.newPassword);
         accountInformationPage.fullConfirmNewPassword(constants.newPassword);
@@ -32,8 +33,9 @@ public class ChangePasswordTest extends BaseTest {
         mainPage.clickDropDownList();
         mainPage.clickMyAccount();
 
-        myAccountPage.clickChangePassword();
+        myAccountPage.clickButtonEdit();
 
+        accountInformationPage.onCheckBoxChangePassword();
         accountInformationPage.fullCurrentPassword(constants.newPassword);
         accountInformationPage.fullNewPassword(constants.Password);
         accountInformationPage.fullConfirmNewPassword(constants.Password);
@@ -54,7 +56,7 @@ public class ChangePasswordTest extends BaseTest {
         mainPage.clickDropDownList();
         mainPage.clickMyAccount();
 
-        myAccountPage.clickChangePassword();
+        myAccountPage.clickButtonEdit();
 
         accountInformationPage.fullCurrentPassword(constants.newPassword);
         accountInformationPage.fullNewPassword(constants.Password);

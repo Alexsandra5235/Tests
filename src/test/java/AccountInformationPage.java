@@ -7,6 +7,12 @@ public class AccountInformationPage {
     Constants constants = new Constants();
 
     /**
+     * Активация чекбокса "Change Password"
+     */
+    public void onCheckBoxChangePassword(){
+        constants.checkBoxChangePassword.click();
+    }
+    /**
      * Заполнение поля "Current Password"
      * @param text
      */
@@ -44,6 +50,6 @@ public class AccountInformationPage {
      * @return
      */
     public boolean visibleMessengerInvalidCurrentPassword(){
-        return constants.messengerErrorCurentPassword.shouldBe(visible).isDisplayed();
+        return constants.messengerErrorCurrentPassword.shouldBe(visible).isDisplayed();
     }
 }

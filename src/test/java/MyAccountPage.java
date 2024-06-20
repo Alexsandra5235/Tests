@@ -19,11 +19,11 @@ public class MyAccountPage {
     }
 
     /**
-     * Нажатие на кнопку "Change Password"
+     * Нажатие на кнопку "Edit"
      * @return
      */
-    public AccountInformationPage clickChangePassword(){
-        constants.buttonChangePassport.click();
+    public AccountInformationPage clickButtonEdit(){
+        constants.buttonEdit.click();
         return new AccountInformationPage();
     }
 

@@ -28,7 +28,10 @@ public class Constants {
             textBoxCurrentPassword = $x("//*[@id=\"current-password\"]"),
             buttonSaveNewPassword = $x("//*[@id=\"form-validate\"]/div/div[1]/button"),
             messengerSuccessChangePassword = $x("//*[@id=\"maincontent\"]/div[2]/div[2]/div/div/div"),
-            messengerErrorCurentPassword = $x("//*[@id=\"maincontent\"]/div[1]/div[2]/div/div/div");
+            messengerErrorCurrentPassword = $x("//*[@id=\"maincontent\"]/div[1]/div[2]/div/div/div"),
+            buttonEdit = $x("//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]/div/div[2]/a[1]"),
+            checkBoxChangeEmail = $x("//*[@id=\"change-email\"]"),
+            checkBoxChangePassword = $x("//*[@id=\"change-password\"]");
 
     public final ElementsCollection errorClickButtonCreateAccount = $$x("//*[@class=\"mage-error\"]");
 
