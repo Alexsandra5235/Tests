@@ -27,7 +27,8 @@ public class Constants {
             buttonChangePassport = $x("//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]/div/div[2]/a[2]"),
             textBoxCurrentPassword = $x("//*[@id=\"current-password\"]"),
             buttonSaveNewPassword = $x("//*[@id=\"form-validate\"]/div/div[1]/button"),
-            messengerSuccessChangePassword = $x("//*[@id=\"maincontent\"]/div[2]/div[2]/div/div/div");
+            messengerSuccessChangePassword = $x("//*[@id=\"maincontent\"]/div[2]/div[2]/div/div/div"),
+            messengerErrorCurentPassword = $x("//*[@id=\"maincontent\"]/div[1]/div[2]/div/div/div");
 
     public final ElementsCollection errorClickButtonCreateAccount = $$x("//*[@class=\"mage-error\"]");
 

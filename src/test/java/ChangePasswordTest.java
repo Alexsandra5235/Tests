@@ -24,5 +24,44 @@ public class ChangePasswordTest extends BaseTest {
         accountInformationPage.clickButtonSave();
 
         assertTrue(signInPage.visibleMessengerValidChangePassword());
+        // Меняем пароль обратно
+        signInPage.fillEmail(constants.registeredEmail);
+        signInPage.fillPassword(constants.newPassword);
+        signInPage.clickButtonSignIn();
+
+        mainPage.clickDropDownList();
+        mainPage.clickMyAccount();
+
+        myAccountPage.clickChangePassword();
+
+        accountInformationPage.fullCurrentPassword(constants.newPassword);
+        accountInformationPage.fullNewPassword(constants.Password);
+        accountInformationPage.fullConfirmNewPassword(constants.Password);
+        accountInformationPage.clickButtonSave();
+    }
+
+    /**
+     * Изменение пароля с неверным параметром "Current Password"
+     */
+    @Test
+    public void ChangePasswordInvalidCurrentPassword(){
+        mainPage.ClickHrefSignIn();
+
+        signInPage.fillEmail(constants.registeredEmail);
+        signInPage.fillPassword(constants.Password);
+        signInPage.clickButtonSignIn();
+
+        mainPage.clickDropDownList();
+        mainPage.clickMyAccount();
+
+        myAccountPage.clickChangePassword();
+
+        accountInformationPage.fullCurrentPassword(constants.newPassword);
+        accountInformationPage.fullNewPassword(constants.Password);
+        accountInformationPage.fullConfirmNewPassword(constants.Password);
+        accountInformationPage.clickButtonSave();
+
+        assertTrue(accountInformationPage.visibleMessengerInvalidCurrentPassword());
+
     }
 }

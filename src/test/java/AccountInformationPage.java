@@ -1,3 +1,5 @@
+import static com.codeborne.selenide.Condition.visible;
+
 /**
  * Страница просмотра и изменения пользовательской информацции
  */
@@ -35,5 +37,13 @@ public class AccountInformationPage {
     public SignInPage clickButtonSave(){
         constants.buttonSaveNewPassword.click();
         return new SignInPage();
+    }
+
+    /**
+     * Проверка появления сообщения о неверно введеном "Current Password"
+     * @return
+     */
+    public boolean visibleMessengerInvalidCurrentPassword(){
+        return constants.messengerErrorCurentPassword.shouldBe(visible).isDisplayed();
     }
 }
