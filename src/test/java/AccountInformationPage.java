@@ -52,4 +52,26 @@ public class AccountInformationPage {
     public boolean visibleMessengerInvalidCurrentPassword(){
         return constants.messengerErrorCurrentPassword.shouldBe(visible).isDisplayed();
     }
+
+    /**
+     * Активация чекбокса "Change Email"
+     */
+    public void onCheckBoxChangeEmail(){
+        constants.checkBoxChangeEmail.click();
+    }
+
+    /**
+     * Отчистка поля "Email"
+     */
+    public void cleanerTextBoxNewEmail(){
+        constants.textBoxNewEmail.clear();
+    }
+
+    /**
+     * Заполнение поля "Email" со значением новой почты
+     * @param text
+     */
+    public void fullNewEmail(String text){
+        constants.textBoxNewEmail.sendKeys(text);
+    }
 }

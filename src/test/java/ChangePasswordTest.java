@@ -58,6 +58,7 @@ public class ChangePasswordTest extends BaseTest {
 
         myAccountPage.clickButtonEdit();
 
+        accountInformationPage.onCheckBoxChangePassword();
         accountInformationPage.fullCurrentPassword(constants.newPassword);
         accountInformationPage.fullNewPassword(constants.Password);
         accountInformationPage.fullConfirmNewPassword(constants.Password);
