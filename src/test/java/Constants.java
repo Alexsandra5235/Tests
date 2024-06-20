@@ -31,7 +31,15 @@ public class Constants {
             buttonEdit = $x("//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[2]/div/div[2]/a[1]"),
             checkBoxChangeEmail = $x("//*[@id=\"change-email\"]"),
             checkBoxChangePassword = $x("//*[@id=\"change-password\"]"),
-            textBoxNewEmail = $x("//*[@id=\"email\"]");
+            textBoxNewEmail = $x("//*[@id=\"email\"]"),
+            buttonCategoryWoman = $x("//*[@id=\"ui-id-4\"]"),
+            buttonSubcategoryTops = $x("//*[@id=\"ui-id-9\"]"),
+            buttonSubcategoryJackets = $x("//*[@id=\"ui-id-11\"]"),
+            buttonCartProduct = $x("//*[@id=\"maincontent\"]/div[3]/div[1]/div[3]/ol/li[1]/div/div/strong/a"),
+            buttonSize = $x("//*[@id=\"option-label-size-143-item-167\"]"),
+            buttonColor = $x("//*[@id=\"option-label-color-93-item-50\"]"),
+            buttonAddToCart = $x("//*[@id=\"product-addtocart-button\"]"),
+            messengerSuccessAddToCard = $x("//*[@id=\"maincontent\"]/div[1]");
 
     public final ElementsCollection errorClickButtonCreateAccount = $$x("//*[@class=\"mage-error\"]");
 

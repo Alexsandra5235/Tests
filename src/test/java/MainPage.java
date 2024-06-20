@@ -43,6 +43,23 @@ public class MainPage {
         return new MyAccountPage();
     }
 
+    /**
+     * Нажатие на подкатегорию
+     */
+    public void clickCategoryJacket(){
+        constants.buttonCategoryWoman.hover();
+        constants.buttonSubcategoryTops.hover();
+        constants.buttonSubcategoryJackets.click();
+    }
+    /**
+     * Нажатие на карточку продукта
+     */
+    public CardProductPage clickCardProduct(){
+        constants.buttonCartProduct.click();
+        return new CardProductPage();
+    }
+
+
 
 
 
