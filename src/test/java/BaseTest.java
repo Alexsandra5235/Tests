@@ -10,6 +10,7 @@ abstract public class BaseTest {
     MainPage mainPage = new MainPage();
     CreateAccountPage createAccountPage = new CreateAccountPage();
     MyAccountPage myAccountPage = new MyAccountPage();
+    SignInPage signInPage = new SignInPage();
     Constants constants = new Constants();
 
     public void SetUp(){

@@ -1,13 +1,4 @@
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
-import static com.codeborne.selenide.Condition.exist;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Condition.visible;
 
 /**
  * Главная страница сайта
@@ -20,6 +11,20 @@ public class MainPage {
     public CreateAccountPage ClickHrefCreateAccount(){
         constants.hrefCreateAccount.click();
         return new CreateAccountPage();
+    }
+    /**
+     * Нажатие на ссылку авторизации пользователя
+     */
+    public SignInPage ClickHrefSignIn(){
+        constants.hrefSignIn.click();
+        return new SignInPage();
+    }
+    /**
+     * Отображение элемента страницы
+     * @return
+     */
+    public boolean visibleItemPage(){
+        return constants.textWelcomeMainPage.shouldBe(visible).isDisplayed();
     }
 
 

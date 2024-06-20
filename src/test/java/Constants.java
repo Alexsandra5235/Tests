@@ -16,7 +16,11 @@ public class Constants {
             ItemTextAccountInformation = $x("//*[@id=\"maincontent\"]/div[2]/div[1]/div[3]/div[1]/strong"),
             errorEmailRegistered = $x("//*[@id=\"maincontent\"]/div[2]/div[2]/div/div/div"),
             errorInvalidEmail = $x("//*[@id=\"email_address-error\"]"),
-            hrefSignIn = $x("/html/body/div[2]/header/div[1]/div/ul/li[2]/a");
+            hrefSignIn = $x("/html/body/div[2]/header/div[1]/div/ul/li[2]/a"),
+            textBoxEmailSignIn = $x("//*[@id=\"email\"]"),
+            textBoxPasswordSignIn = $x("//*[@id=\"pass\"]"),
+            buttonSignIn = $x("//*[@id=\"send2\"]"),
+            textWelcomeMainPage = $x("/html/body/div[2]/header/div[1]/div/ul/li[1]/span");
 
     public final ElementsCollection errorClickButtonCreateAccount = $$x("//*[@class=\"mage-error\"]");
 
