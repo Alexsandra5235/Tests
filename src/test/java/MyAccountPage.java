@@ -17,4 +17,14 @@ public class MyAccountPage {
             return false;
         }
     }
+
+    /**
+     * Нажатие на кнопку "Change Password"
+     * @return
+     */
+    public AccountInformationPage clickChangePassword(){
+        constants.buttonChangePassport.click();
+        return new AccountInformationPage();
+    }
+
 }

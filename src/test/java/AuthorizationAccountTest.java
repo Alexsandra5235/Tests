@@ -28,6 +28,10 @@ public class AuthorizationAccountTest extends BaseTest{
 
         assertTrue(signInPage.visibleMessengerEmptyText());
     }
+
+    /**
+     * Авторизация с неверным паролем
+     */
     @Test
     public void AuthorizationPasswordInvalid(){
         mainPage.ClickHrefSignIn();

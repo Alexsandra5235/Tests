@@ -27,6 +27,23 @@ public class MainPage {
         return constants.textWelcomeMainPage.shouldBe(visible).isDisplayed();
     }
 
+    /**
+     * Раскрытие выпадающего списка для перехода в настройки аккаунта
+     */
+    public void clickDropDownList(){
+        constants.buttonOpenDropDownList.click();
+    }
+
+    /**
+     * Переход в аккаунт пользователя
+     * @return
+     */
+    public MyAccountPage clickMyAccount(){
+        constants.buttonOpenMyAccount.click();
+        return new MyAccountPage();
+    }
+
+
 
 
 

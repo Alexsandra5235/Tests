@@ -55,4 +55,12 @@ public class SignInPage {
     public boolean visibleMessengerInvalidPassword(){
         return constants.errorInvalidPassword.shouldBe(visible).isDisplayed();
     }
+
+    /**
+     * Проверка наличия сообщения об успешно измененном пароле
+     * @return
+     */
+    public boolean visibleMessengerValidChangePassword(){
+        return constants.messengerSuccessChangePassword.shouldBe(visible).isDisplayed();
+    }
 }

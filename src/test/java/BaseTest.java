@@ -11,6 +11,7 @@ abstract public class BaseTest {
     CreateAccountPage createAccountPage = new CreateAccountPage();
     MyAccountPage myAccountPage = new MyAccountPage();
     SignInPage signInPage = new SignInPage();
+    AccountInformationPage accountInformationPage = new AccountInformationPage();
     Constants constants = new Constants();
 
     public void SetUp(){
